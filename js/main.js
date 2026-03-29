@@ -15,11 +15,10 @@ function onBallClick(elBall, maxDiameter) {
     changeBallColor(elBall, randBallColor)
 }
 
-function changeBallSize(elBall, ballSize, maxDiameter) {
+function changeBallSize(elBall, ballSize, maxDiameter,minDiameter) {
     const currBall = gBalls[elBall.classList[1]]
     currBall.size = ballSize
-    console.log(currBall.size)
-    if (currBall.size >= maxDiameter) currBall.size = 100
+    if (currBall.size >= maxDiameter || currBall.size < minDiameter) currBall.size = 100
 
     elBall.style.width = currBall.size + 'px'
     elBall.style.height = currBall.size + 'px'
