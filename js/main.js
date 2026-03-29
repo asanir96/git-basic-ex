@@ -1,10 +1,11 @@
 'use strict'
 
-const gBallSizeDiff = 50
+var gBallSizeDiff = 50
 var gBallSize = 100
 var gBallSizeLimit = 400
 
 function onBallClick(elBall) {
+    gBallSizeDiff = getRandomInt(20, 61)
     gBallSize += gBallSizeDiff
     if (gBallSize >= gBallSizeLimit) gBallSize = 100
 
