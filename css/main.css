@@ -25,3 +25,18 @@ h1 {
     font-weight: bold;
     transition: 1s;
 }
+.ball2{
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(135, 222, 180);
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 1s;
+}
