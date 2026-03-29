@@ -9,14 +9,16 @@ function onBallClick(elBall, maxDiameter) {
     const currBall = gBalls[elBall.classList[1]]
 
     const randBallSizeDiff = getRandomInt(20, 61)
+    const newBallSize = gBalls[elBall.classList[1]].size +randBallSizeDiff
     const randBallColor = getRandomColor()
-    changeBallSize(elBall, randBallSizeDiff, maxDiameter)
+    changeBallSize(elBall, newBallSize, maxDiameter)
     changeBallColor(elBall, randBallColor)
 }
 
-function changeBallSize(elBall, ballDiff, maxDiameter) {
+function changeBallSize(elBall, ballSize, maxDiameter) {
     const currBall = gBalls[elBall.classList[1]]
-    currBall.size += ballDiff
+    currBall.size = ballSize
+    console.log(currBall.size)
     if (currBall.size >= maxDiameter) currBall.size = 100
 
     elBall.style.width = currBall.size + 'px'
