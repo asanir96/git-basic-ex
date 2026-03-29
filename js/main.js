@@ -2,14 +2,13 @@
 
 var gBallSizeDiff = 50
 var gBallSize = 100
-var gBallSizeLimit = 400
 
-function onBallClick(elBall) {
+function onBallClick(elBall, maxDiameter) {
     var randBallColor = getRandomColor()
     gBallSizeDiff = getRandomInt(20, 61)
     
     gBallSize += gBallSizeDiff
-    if (gBallSize >= gBallSizeLimit) gBallSize = 100
+    if (gBallSize >= maxDiameter) gBallSize = 100
 
     elBall.style.width = gBallSize + 'px'
     elBall.style.height = gBallSize + 'px'
